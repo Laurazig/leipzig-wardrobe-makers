@@ -24,9 +24,9 @@ export default class Makers   {
         let query
         if(filters) {
             if("name" in filters) {
-                query ={$text: {$search: filters["name"] } }
+                query ={$text: {$search: filters["name"] } }   // not working 
             } else if ("clothesItem" in filters) {
-                query ={ "clothesItem": {$eq: filters["clothesItem"] } }
+                query ={ "clothesItem": {$eq: filters["clothesItem"] } }   // not working
             } else if ("zipcode" in filters) {
                 query = { "address.zipcode": { $eq: filters["zipcode"] } }
             }
@@ -50,8 +50,8 @@ export default class Makers   {
 
             return {makersList, totalNumMakers}
         } catch (e) {
-            console.error(
-                `convert cursor to array or problem counting documents, ${e}`,
+            console.error(                                           // this error
+                `convert cursor to array or problem counting documents, ${e}`,   
             )
             return { makersList: [], totalNumMakers:0}
         }

@@ -14,7 +14,7 @@ const MakersList = props => {
     retrieveclothes();
   }, []);
 
-  const onChangeSearchName = e => {
+  const onChangeSearchName = e => {      // not working
     const searchName = e.target.value;
     setSearchName(searchName);
   };
@@ -24,7 +24,7 @@ const MakersList = props => {
     setSearchZip(searchZip);
   };
 
-  const onChangeSearchClothesItem = e => {
+  const onChangeSearchClothesItem = e => {       // not working
     const searchClothesItem = e.target.value;
     setSearchClothesItem(searchClothesItem);
 
