@@ -14,7 +14,6 @@ export default class MakersController {
             filters.name = req.query.name
         } 
 
-
         const { makersList, totalNumMakers } = await makersDAO.getMakers({
             filters,
             page,

@@ -24,7 +24,7 @@ export default class Makers   {
         let query
         if(filters) {
             if("name" in filters) {
-                query ={$text: {$search: filters["name"] } }   // not working 
+                query ={$text: {$search: filters["name"] } }   // 29 mins- not working 
             } else if ("clothesItem" in filters) {
                 query ={ "clothesItem": {$eq: filters["clothesItem"] } }   // not working
             } else if ("zipcode" in filters) {

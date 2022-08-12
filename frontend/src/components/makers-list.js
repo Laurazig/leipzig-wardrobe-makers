@@ -11,10 +11,10 @@ const MakersList = props => {
 
   useEffect(() => {
     retrieveMakers();
-    retrieveclothes();
+  //  retrieveclothes();
   }, []);
 
-  const onChangeSearchName = e => {      // not working
+  const onChangeSearchName = e => {      
     const searchName = e.target.value;
     setSearchName(searchName);
   };
@@ -30,12 +30,15 @@ const MakersList = props => {
 
   };
 
+  console.log(clothes, "makers-list line 33")
   const retrieveMakers = () => {
     MakerDataService.getAll()
       .then(response => {
         console.log(response.data);
         setMaker(response.data.makers);
-
+        setClothes(response.data.makers.map(item => {  //naqvi
+          return item.clothesItem
+        }))
       })
       .catch(e => {
         console.log(e);
@@ -43,10 +46,14 @@ const MakersList = props => {
   };
 
   const retrieveclothes = () => {
+    console.log(maker)
     MakerDataService.getClothes()
       .then(response => {
-        console.log(response.data);
-        setClothes(["All Clothes"].concat(response.data));
+        console.log(response.data, "makers-list line 49");
+        setClothes(response.data.makers.map(item => {  //naqvi
+          return item.clothesItem
+        }))
+        //setClothes(["All Clothes"].concat(response.data));
 
       })
       .catch(e => {
@@ -77,13 +84,13 @@ const MakersList = props => {
     find(searchZip, "zipcode")
   };
 
-  const findByClothesItem = () => {
-    if (searchClothesItem === "All Clothes") {
-      refreshList();
-    } else {
-      find(searchClothesItem, "clothesItem")
-    }
-  };
+  // const findByClothesItem = () => {
+  //   if (searchClothesItem === "All Clothes") {
+  //     refreshList();
+  //   } else {
+  //     find(searchClothesItem, "clothesItem")
+  //   }
+  // };
 
   return (
     <div>
@@ -137,7 +144,7 @@ const MakersList = props => {
             <button
               className="btn btn-outline-secondary"
               type="button"
-              onClick={findByClothesItem}
+             // onClick={findByClothesItem}
             >
               Search
             </button>

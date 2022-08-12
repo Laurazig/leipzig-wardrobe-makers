@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Rosentreter Modedesign2",
+        "clothesItem": "trousers, shirts",
+        "address": {
+            "building":93,
+            "street": "Karl-Heine-Str.",
+            "zipcode": "04229"
+        }
+    },
+    {
+        "name": "Rosentreter Modedesign3",
+        "clothesItem": "trousers, shirts",
+        "address": {
+            "building":93,
+            "street": "Karl-Heine-Str.",
+            "zipcode": "04229"
+        }
+    },
+    {
+        "name": "Rosentreter Modedesign4",
+        "clothesItem": "trousers, shirts",
+        "address": {
+            "building":93,
+            "street": "Karl-Heine-Str.",
+            "zipcode": "04229"
+        }
+    },
+    {
+        "name": "Rosentreter Modedesign5",
+        "clothesItem": "trousers, shirts",
+        "address": {
+            "building":93,
+            "street": "Karl-Heine-Str.",
+            "zipcode": "04229"
+        }
+    },
+    {
+        "name": "Rosentreter Modedesign6",
+        "clothesItem": "trousers, shirts",
+        "address": {
+            "building":93,
+            "street": "Karl-Heine-Str.",
+            "zipcode": "04229"
+        }
+    }
+]
