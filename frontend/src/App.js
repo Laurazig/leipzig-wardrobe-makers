@@ -22,7 +22,7 @@ function App() {
       <Router>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <a href="/makers" className="navbar-brand">
-            Makers Reviews
+            Makers in Leipzig
           </a>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
