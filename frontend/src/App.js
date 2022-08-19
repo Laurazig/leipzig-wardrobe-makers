@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import AddReview from "./components/add-review";
 import Maker from "./components/makers";
 import MakersList from "./components/makers-list";
@@ -15,9 +14,9 @@ function App() {
     setUser(user);
   }
 
-  async function logout() {
-    setUser(null)
-  }
+  // async function logout() {
+  //   setUser(null)
+  // }
 
   return (
       <Router>
@@ -31,7 +30,7 @@ function App() {
                 Makers
               </Link>
             </li>
-            <li className="nav-item" >
+            {/* <li className="nav-item" >
               {user ? (
                 <a onClick={logout} className="nav-link" style={{ cursor: 'point' }} >
                   Logout {user.name}
@@ -42,7 +41,7 @@ function App() {
                 </Link>
               )}
 
-            </li>
+            </li> */}
           </div>
         </nav>
 
