@@ -9,7 +9,8 @@ export default class ReviewsDAO {
             return
         }
         try {
-            reviews = await conn.db(process.env.MAKERREVIEWS_NS).collection("reviews")
+            reviews = await conn.db(process.env.MAKERS_NS).collection("reviews")
+            //console.log(reviews)
         } catch (e) {
             console.error(`unable to establish collection handles in userDAO: ${e}`)
         }
@@ -25,6 +26,7 @@ export default class ReviewsDAO {
             }
 
             return await reviews.insertOne(reviewDoc)  //unable to post review: TypeError: Cannot read properties of undefined (reading 'insertOne')
+            //no schema
         } catch (e) {
             console.error(`unable to post review: ${e}`)
             return { error: e }

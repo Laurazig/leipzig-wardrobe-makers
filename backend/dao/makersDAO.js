@@ -11,7 +11,7 @@ export default class Makers   {
             makers = await conn.db(process.env.MAKERS_NS).collection("makers")
         } catch (e) {
             console.error(
-                'unable to establish a collection handle in makersDAO: ${e}',
+                `unable to establish a collection handle in makersDAO: ${e}`,
             )
         }
     }

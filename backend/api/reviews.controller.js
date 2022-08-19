@@ -10,13 +10,14 @@ export default class ReviewsController {
                 _id: req.body.user_id
             }
             const date = new Date()
-
+            console.log(req.body)
             const ReviewResponse = await ReviewsDAO.addReview(
                 makerId,
                 userInfo,
                 review,
                 date,
             )
+            //await ReviewResponse.save() //added by Naqvi
             res.json({ status: "success"})
         } catch (e){
             res.status(500).json({error:e.message})
