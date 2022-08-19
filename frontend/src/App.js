@@ -25,11 +25,11 @@ function App() {
             Makers in Leipzig
           </a>
           <div className="navbar-nav mr-auto">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/makers" className="nav-link">
                 Makers
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav-item" >
               {user ? (
                 <a onClick={logout} className="nav-link" style={{ cursor: 'point' }} >
