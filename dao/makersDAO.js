@@ -8,6 +8,7 @@ export default class Makers   {
             return
         }
         try {
+            console.log(`try to connect in makers DAO `)
             makers = await conn.db(process.env.MAKERS_NS).collection("makers")
         } catch (e) {
             console.error(

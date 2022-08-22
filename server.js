@@ -10,6 +10,6 @@ app.use(express.json())
 app.use("/api/v1/makers", makers)
 app.use("*", (req, res)=> res.status(404).json({ error:"notfound"}))
 //app.use(express.static(path.join(__dirname, "fronend/build")))
-
+console.log("server line 13 error")
 export default app
 
