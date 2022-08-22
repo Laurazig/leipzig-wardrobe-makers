@@ -6,7 +6,7 @@ import ReviewsDAO from "./dao/reviewsDAO.js"
 dotenv.config()
 const MongoClient = mongodb.MongoClient
 const port = process.env.PORT || 8000
-
+//making a comment to check heroku
 MongoClient.connect(
     process.env.MAKERREVIEWS_DB_URI,
     // {
