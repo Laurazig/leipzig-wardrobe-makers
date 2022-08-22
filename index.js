@@ -21,12 +21,17 @@ MongoClient.connect(
 })
 //initial reference to maker collection database
 .then(async client => {   
-    await makersDAO.injectDB(client)
-    await ReviewsDAO.injectDB(client)
-    app.use( (req, res, next)=>{
-        console.log(req.url)
-            next ()
-    })
+    try {
+        await makersDAO.injectDB(client)
+        await ReviewsDAO.injectDB(client)
+        app.use( (req, res, next)=>{
+            console.log(req.url)
+                next ()
+        })
+        
+    } catch (error) {
+        console.error(error)
+    }
     app.listen(port, ()=>{
         console.log(`listening on port ${port}`)
     })
