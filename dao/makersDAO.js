@@ -5,6 +5,7 @@ let makers
 export default class Makers   {
     static async injectDB(conn) { //call method when server starts, connects to DB
         if(makers){
+            console.log(`makers ${makers}`)
             return
         }
         try {

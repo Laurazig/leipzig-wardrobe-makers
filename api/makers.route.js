@@ -4,7 +4,7 @@ import ReviewCtrl from "./reviews.controller.js";
 
 const router = express.Router();
 
-console.log(`makers route ${MakersCtrl.apiGetMakersById}`);
+console.log(`makers route`);
 router.route("/").get(MakersCtrl.apiGetMakers);
 router.route("/id/:id").get(MakersCtrl.apiGetMakersById);
 router.route("/clothes").get(MakersCtrl.apiGetMakersClothes);
